@@ -13,17 +13,29 @@ namespace Experimenting
             return "I don't have one";
         }
 
+        /// <summary>
+        /// Only available to inherited classes.
+        /// </summary>
         protected void OnlyInherited() { }
     }
 
     internal sealed class Nathan : Person
     {
-        protected string SayName()
+        /// <summary>
+        /// Method hiding
+        /// </summary>
+        /// <returns></returns>
+        new public string SayName()
         {
             OnlyInherited();
             return "Nathan";
         }
 
+        /// <summary>
+        /// Method overloading
+        /// </summary>
+        /// <param name="CommonName"></param>
+        /// <returns></returns>
         public string SayName(bool CommonName)
         {
             return "Nathan";

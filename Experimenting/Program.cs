@@ -10,9 +10,13 @@ namespace Experimenting
     {
         static void Main(string[] args)
         {
-            MultidimensionalArray();
-            LiftedOperators();
+            //MultidimensionalArray();
+            //LiftedOperators();
+            Polymorphism();
+        }
 
+        public static void Polymorphism()
+        {
             var person = new Person();
             var nathan = new Nathan();
 
@@ -21,7 +25,7 @@ namespace Experimenting
 
             List<Person> people = new List<Person> { person, nathan };
 
-            foreach(Person p in people)
+            foreach (Person p in people)
             {
                 Console.WriteLine(p.SayName());
             }
